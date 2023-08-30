@@ -4,6 +4,7 @@ Password Encryption and Validation Module
 """
 import bcrypt
 
+
 def hash_password(password: str) -> bytes:
     """
     Generate a salted and hashed password.
@@ -18,16 +19,19 @@ def hash_password(password: str) -> bytes:
     hashed = bcrypt.hashpw(encoded, bcrypt.gensalt())
     return hashed
 
+
 def is_valid(hashed_password: bytes, password: str) -> bool:
     """
     Validate whether the provided password matches the hashed password.
 
     Args:
-        hashed_password (bytes): A byte string representing the salted, hashed password.
+        hashed_password (bytes): A byte string representing the salted,
+        hashed password.
         password (str): The plain text password to be validated.
 
     Returns:
-        bool: True if the provided password matches the hashed password, False otherwise.
+        bool: True if the provided password matches the hashed password,
+        False otherwise.
     """
     valid = False
     encoded = password.encode()
