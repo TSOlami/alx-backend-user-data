@@ -14,13 +14,13 @@ PII_FIELDS = ("name", "email", "phone", "ssn", "password")
 def filter_datum(fields: List[str], redaction: str,
                  message: str, separator: str) -> str:
     """Filter sensitive data fields in a log message.
-    
+
     Args:
         fields (List[str]): List of fields to obfuscate.
         redaction (str): String to replace the obfuscated data with.
         message (str): Log message containing data to be obfuscated.
         separator (str): Character separating fields in the log message.
-    
+
     Returns:
         str: Log message with obfuscated data.
     """
@@ -32,7 +32,7 @@ def filter_datum(fields: List[str], redaction: str,
 
 def get_logger() -> logging.Logger:
     """Get a configured logger instance.
-    
+
     Returns:
         logging.Logger: Logger instance for user data.
     """
@@ -49,7 +49,7 @@ def get_logger() -> logging.Logger:
 
 def get_db() -> mysql.connector.connection.MySQLConnection:
     """Get a database connection.
-    
+
     Returns:
         mysql.connector.connection.MySQLConnection: Database connection object.
     """
