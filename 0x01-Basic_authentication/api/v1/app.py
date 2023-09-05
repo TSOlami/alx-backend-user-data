@@ -22,7 +22,7 @@ def not_found(error) -> str:
 
 
 @app.errorhandler(401)
-def unauthorized() -> str:
+def unauthorized(error) -> str:
     """ Not authorized handler
     """
     return jsonify({"error": "Unauthorized"}), 401
@@ -30,7 +30,7 @@ def unauthorized() -> str:
 
 # forbidden endpoint
 @app.errorhandler(403)
-def forbidden() -> str:
+def forbidden(error) -> str:
     """ Forbidden handler
     """
     return jsonify({"error": "Forbidden"}), 403
