@@ -4,6 +4,7 @@ Route module for auth
 """
 from flask import request
 from typing import List, TypeVar
+import re
 
 
 class Auth():
