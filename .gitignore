@@ -1,7 +1,7 @@
-*main.py
 *.csv
 __pycache__
 *.sql
 .gitignore
 *SimpleApi
 __MAC*
+venv
